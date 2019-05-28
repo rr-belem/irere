@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout/LayoutPadrao">
+
+<head></head>
+
+<body>
+<section class="content" layout:fragment="conteudo">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-9">
+				<div class="card">
+					<form method="POST" action="#" class="form-horizontal">
+						<div class="card-header card-header-text" data-background-color="orange">
+							<h4 class="card-title">Cadastro de Produtos</h4>
+						</div>
+						<div class="card-content">
+							<div class="row">
+								<div class="col-sm-3">
+									<div class="form-group label-floating">
+										<label class="control-label">Código</label> 
+										<input type="text" class="form-control">
+									</div>
+								</div>
+									<div class="col-sm-9">
+										<div class="form-group label-floating">
+											<label class="control-label">Nome</label> 
+											<input type="text" class="form-control">
+										</div>
+									</div>
+							</div>
+							
+							<div class="row">
+								<div class="col-sm-4">
+									<div class="form-group label-floating">
+										<label class="control-label ">Preço</label> 
+										<input type="text" class="form-control js-decimal">
+									</div>
+								</div>
+									<div class="col-sm-4">
+										<div class="form-group label-floating">
+											<label class="control-label">Estoque</label> 
+											<input type="text" class="form-control js-plain">
+										</div>
+									</div>
+								<div class="col-sm-4">
+										<div class="form-group label-floating">
+											<label class="control-label">Estoque Mínimo</label> 
+											<input type="text" class="form-control js-plain">
+										</div>
+									</div>
+							</div>
+							
+							<div class="row">
+								<div class="col-sm-4">
+									<div class="form-group label-floating">
+										<label class="control-label">Grupo</label> 
+										<input type="text" class="form-control">
+									</div>
+								</div>
+									<div class="col-sm-4">
+										<div class="form-group label-floating">
+											<label class="control-label">Subgrupo</label> 
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								<div class="col-sm-4">
+										<div class="form-group label-floating">
+											<label class="control-label">Fornecedor</label> 
+											<input type="text" class="form-control">
+										</div>
+									</div>
+							</div>
+							
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group label-floating">
+										<label class="control-label" >Descrição</label>
+										<textarea class="form-control" rows="5" ></textarea>
+									</div>
+								</div>
+							</div>
+			
+							<button type="submit" class="btn btn-warning btn-round">Salvar</button>
+							<div class="ripple-container"></div>
+							
+						</div>
+						
+			
+					</form>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card card-profile">
+					<div class="card-avatar">
+						<a href="#produto">
+							<img class="img" th:src="@{/layout/img/faces/refrigerante-mock.png}">
+						</a>
+					</div>
+					<div class="card-body">
+						<h4 class="card-title">Nome do Produto</h4>
+						<p class="card-description">Área para inserir foto do produto</p>
+						<a href="#produto" class="btn btn-warning btn-round">Upload</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</section>
+</body>
+</html>
